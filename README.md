@@ -1,24 +1,24 @@
 # Photo Converter 📸
 
-Утилита командной строки (CLI) на Python для пакета Конвертации изображений из одного формата в другой с сохранением высокого качества и поддержкой прозрачности.
+A Python command-line (CLI) utility for batch converting image files from one format to another with high quality preservation and smart transparency handling.
 
-## 🚀 Возможности
-- **Пакетная обработка**: Конвертация всех изображений выбранного формата в указанной папке за один запуск.
-- **Индикатор прогресса**: Удобный шкала прогресса (progress bar) на базе `tqdm`.
-- **Умная обработка прозрачности**: При конвертации из форматов с альфа-каналом (PNG, WebP и др.) в форматы без него (JPG, JPEG) прозрачный фон автоматически заливается белым цветом.
-- **Высокое качество**: Автоматическое сохранение снимков с максимальным качеством (`quality=95`, без сжатия подвыборки `subsampling=0`) для сжатых форматов.
+## 🚀 Features
+- **Batch Processing**: Convert all images of a chosen format within a folder in a single run.
+- **Progress Bar**: Smooth progress bar powered by `tqdm`.
+- **Smart Transparency Handling**: When converting from formats with alpha channel (PNG, WebP) to formats without it (JPG, JPEG), transparent backgrounds are automatically filled with clean white.
+- **High Quality Output**: Lossy formats (JPG, WebP) are saved with maximum quality settings (`quality=95`, `subsampling=0`).
 
-## 📁 Поддерживаемые форматы
+## 📁 Supported Formats
 `bmp`, `ico`, `jpeg`, `jpg`, `pbm`, `pgm`, `png`, `ppm`, `tif`, `tiff`, `tga`, `webp`
 
-## 🛠️ Установка и запуск
+## 🛠️ Installation & Setup
 
-1. **Клонирование / Переход в папку проекта**:
+1. **Navigate to project directory**:
    ```bash
    cd "Convertor photo"
    ```
 
-2. **Создание и активация виртуального окружения**:
+2. **Create & activate virtual environment**:
    - **Windows (PowerShell)**:
      ```powershell
      python -m venv venv
@@ -30,19 +30,19 @@
      source venv/bin/activate
      ```
 
-3. **Установка зависимостей**:
+3. **Install dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Запуск**:
+4. **Run**:
    ```bash
    python convertor_photo.py
    ```
 
-## 📝 Пример использования
-При запуске программа запросит:
-1. Путь к исходной папке с изображениями (например, `C:\Photos\Input`).
-2. Путь к целевой папке для сохранения результа (например, `C:\Photos\Output`).
-3. Исходный формат файлов (например, `png`).
-4. Желаемый конечный формат (например, `jpg`).
+## 📝 Usage Example
+When launched, the script will prompt for:
+1. Source folder path containing images (e.g. `C:\Photos\Input`).
+2. Destination folder path (e.g. `C:\Photos\Output`).
+3. Input file format (e.g. `png`).
+4. Target output file format (e.g. `jpg`).
