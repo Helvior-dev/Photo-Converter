@@ -49,8 +49,8 @@ if not files:
     print("No files found for conversion")
     exit()
 print(f"\nFiles found: {len(files)}")
-print(f"Conversion: {input_ext.upper()} → {output_ext.upper()}\n")
-for filename in tqdm(files, desc="Conversion", unit="file"):
+print(f"Conversion: {input_ext.upper()} -> {output_ext.upper()}\n")
+for filename in tqdm(files, desc="Conversion", unit="file", ascii=True):
     input_path = os.path.join(input_dir, filename)
     output_name = os.path.splitext(filename)[0] + "." + output_ext
     output_path = os.path.join(output_dir, output_name)
@@ -70,4 +70,4 @@ for filename in tqdm(files, desc="Conversion", unit="file"):
             img.save(output_path, **save_kwargs)
     except Exception as e:
         print(f"\nError with file {filename}: {e}")
-print("\n✅ Done! All images have been processed.")
+print("\nDone! All images have been processed.")
